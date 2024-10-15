@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Home</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+    <head>
+        <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfNjcMpAAAAAAy6svoJhA3qN8nM5HFDtdRJyjeI&badge=inline"></script>
+    </head>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="~/logo.png" alt="Ahanya Technologies Logo">
+        </div>
+        <div class="company-info">
+            <h1>Ahanya Technologies</h1>
+            <p>Your Ultimate Learning Platform</p>
+        </div>
+        <nav>
+            <a href="/Index">Home</a>
+            <a href="#">Courses</a>
+            <a href="/AboutUs">About Us</a>
+            <a href="/ContactUs">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Ahanya Technologies. All rights reserved.</p>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
